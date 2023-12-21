@@ -1,0 +1,293 @@
+---
+title: "Indigenous People and Forest Conservation:
+        Evidence from India’s Scheduled Areas"
+author: "Soumya Agrawal"
+format:
+  cmc-article-pdf:
+    fontsize: 12pt
+    margin-left: 1.5in
+    margin-right: 1.5in
+    margin-bottom: 1.2in
+    margin-top: 1.2in
+    keep-tex: true
+    fig-pos: 'tbp'
+    tbl-pos: 'tbp'
+    include-in-header: header.tex
+bibliography: bibliography.bib
+abstract: | 
+  Many studies have argued that entrusting indigeneous people over commons might lead to less exploitation of natural resources and improve forest outcomes. However, some studies say that it might lead to elitist capture of resources and resource extraction. Can leaving the management of forests to indigeneous people always lead to conservation? Inspired by the recent paper of Gulzar et al. ,using the difference-in-difference design, I show that giving political representation to the indigenous people through 'umbrella institutions' will improve their voice over resource management leading to forest conservation and reduced deforestation in the context set in India. I also employ propensity score matching at the state-level data, using  covariates to get the optimum balance between the matched control and treatment group to see if treatment leads to less primary forest cover loss in the treated states. I conclude that the giving political representation to indigeneous people will not only improve their societal, economic,political outcomes but also lead to improvement in environmental outcomes. However, mere enactment of this act might not lead empowerment of these communities and hence forest conservation but it requires de facto power-sharing. 
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+GitHub link : https://github.com/soumya171002/AQRD
+
+
+# Introduction
+
+Since 2010, the net loss in forest cover globally was 4.7 million hectares per year[^1].
+Many studies argue that giving local people rights over forests and commons will lead to more conservation than government or private control.
+On the other hand, others have argued that this is not necessary and indigenous people can favor extraction for short-term revenue gains, might cater to their elite, or prioritize infrastructure, and may thus need additional incentives to conserve.
+[^2] Gulzar et al. [@gulzar2021representation] proposed that umbrella institutions that give political representation to indigenous people, such as, inclusive multi-purpose village councils, rather than more targeted community resource management institutions, can better address the dual policy challenges of forest management and development, simultaneously
+. This can be achieved through mandated representation of indigenous people in village councils and ensuring that they have a voice over forest resources and management
+.
+
+[^1]: "Deforestation and Forest Loss" *Our World in Data*.
+    <https://ourworldindata.org/deforestation>.
+
+[^2]: Agarwal, B., Sharma, S.C.
+    and Roy, S.N.
+    (2023) Can political representation improve forest conservation?
+    The Indian experience.
+    GDI Working Paper 2023-065.
+    Manchester: The University of Manchester.
+
+Schedule tribes(STs) represent on average India’s most economically vulnerable and politically excluded and their lives and livelihoods depend on forests.
+After the independence, the government of India declared some regions of India as scheduled areas where scheduled tribes have preponderance and have specific governance mechanisms wherein the Central government plays a direct role in protecting the cultural and economic interests of ST in this area[^3].
+In non-scheduled areas under the 73rd amendment in 1992(Panchayat Raj Act)In 1996, India formalized local government councils.
+This was extended to the scheduled areas under the Panchayat Extension to Scheduled Areas Act(PESA), extending local government councils to these areas.
+However, the difference was that PESA gave mandated representation for ST in the local government council which might give them more autonomy over their decisions.
+They give two causal roots between political representation and forest conservation.
+First, they argue that this will lead to an increase in forest stewardship because they will be able to better pursue their economic interest.
+"For example, they might now be able to collect and sale non-timber forest produce easily and thrwat timber and other industrial interests.The second route they propose is that indigenous people might now be able to resist mining and other commercial operations"[^4]
+. .
+
+[^3]: *Scheduled Tribes* <https://en.wikipedia.org/wiki/Scheduled_Areas#:~:text=Scheduled%20Areas%20are%20areas%20in,scheduled%20tribes%20in%20the%20area>.
+
+[^4]: shown in the appendix
+
+Following their influential paper, I use difference-in-difference to explore the first causal root they are proposing.
+I looked at the Non-Timber Forest Produce (NTFP) of Gujarat and Chhattisgarh, 2 states that fall under the gambit of PESA.Gujarat notified its PESA rules in 2017 while Chhattisgarh did it in 2022.
+Using data from 2013-14 to 2021-2022 and taking Gujarat as treated state, I see that treatment indeed leads to NTFP production in Gujarat after 2017.
+I also use Propensity score matching to estimate the impact of PESA on primary forest cover loss in 13 treated states out of 25 states in India.I use covariates like gap in literacy between ST and state average, ST population, GDP of the state to come up with the propensity to get treated for matching control and treatment group.I found that treatment actually leads to decrease in primary forest cover loss.
+
+At last, I also did heterogeneity analysis between various states.I found that poorer and richer states tend to perform better than middle income states in terms of forest outcomes after the treatment.
+This can be attributed to having more indigenous population and good institutions respectively.I also did some comparison of PESA with Forest Rights Act (2006).
+Forest Rights Act[^5] was enacted in 2006 in India which gave scheduled tribes forest land rights.Gulzar et al. [@gulzar2021representation] found no discernible impact of FRA on forest outcomes[^6]
+. However, I find that FRA had substantial impact on improving forest outcomes in poorer states
+. This can be also be connected to the fact that these states have higher ST population to begin with and these states are repeaing the benefits of starting at a lower base
+.
+
+[^5]: "Forest Rights Act" *Ministry of Tribal Affairs, Governemnt of India* <https://tribal.nic.in/FRA.aspx>.
+
+[^6]: Shown in the appendix
+
+# Literature Review
+
+Many people have argued that forests would be better protected by local communities rather than governments or private players[@dawson2021role].
+However, evidence have been mixed and other studies have indicated that forest outcomes depend on the type of democratic structure present [@OPOKU2023100073].Why is mandated representation a promising institutional mechanism?
+@FOX2015346 writes that “institutional change strategies that promote both “voice” and “teeth”” are the ones that are most likely to succeed.
+The teeth can be given by any government reform.
+However, mandated representation can give necessary 'voice' to the indigenous people to take their own decision.
+According to @gulzar2021representation, "Quotas that reserve electoral positions for marginalized populations resolve accountability impediments to the successful implementation of democratic decentralization".
+Hence, umbrella institution can give indigenous people rights and control over forest resources.If their interest alighns with the interest of forest conservation, we might see increase in forest conservation after the extension of rights.
+
+# Data and Methodology
+
+The authors use 2 data sets.
+"The MEaSURES Vegetation Continuous Fields (VCF) dataset (@Song2018-hc) reports annual indices of tree canopy(forest index), non-tree vegetation, and bare ground at 0.05-degree resolution from 1982 to 2016.
+The second dataset is Global Forest Cover(GFC) by (@doi:10.1126/science.1244693) which reports the ex-ante tree canopy as a share of the cell was deforested(defined as a stand-replacement disturbance, that is, disturbance that eliminates all trees in the pixel) between 2001 and 2017".
+The author converted the GFC data from pixel to village level and deforested cells per village per year into hectares per year.
+
+I test whether PESA adoption led to more non-timber forest produce as posited by @gulzar2021representation in their paper.
+I have used NFTP data from the two states of Gujarat and Chhattisgarh from 2013-2021.
+I got the data from the Gujarat forest department[^7] reports and the Chhattisgarh forest department[^8].
+The outcome variable which is Non-timber forest produce is measured in tons.
+I use a difference-in-difference approach to estimate the causal impact of PESA on NTFP production in Gujarat which notified its PESA act in 2017 compared to Chhattisgarh which will be treated as a control state as it notified its complete PESA rules in 2022 only.
+My estimating equation is - $$ Y_{it} = \alpha_{i} + \beta_{t} + \tau\text{D}_{it} +  X_{1i} + \varepsilon_{it}  $$
+
+Where $Y_{it}$ is the NFTP production for state i in period t.
+$\alpha_{i}$ is the state-level fixed effect.
+$\beta_{t}$ is the time-fixed effect.
+$\text{D}_{it}$ is the treatment variable which is 1 if the state is Gujarat and the year is above 2017.
+$\tau$ is the effect of the treatment on the Non-Timber Forest Production.
+$X_{1i}$ is the control variable (GDP of states) to make parallel trends assumption more plausible.
+
+I also did a heterogeneous treatment effect analysis from the data set given by @gulzar2021representation.
+I divided the states between 3 groups “poor”, “middle” and “rich”.
+I employ the same difference-in-difference approach to see the differential impact PESA has on these states.
+
+My second extension is to use the methodology of Propensity score matching to see the impact of PESA on average primary forest cover loss (which is associated with scheduled tribes) in 25 states in India out of which 13 states are treated.
+I use a set of controls to come up with the propensity of getting treated.
+Then I ran the weighted least square regression of average forest cover loss on treatment with the weights given by propensity.
+The data I use comes from the same GFC data set that the authors use but I use the outcome variable at the state level.
+The data on controls comes from the Government of India's different offices.
+Estimating the equation to get the propensity score is as follows.
+
+$$\Pr(Di) = logit^{-1}(\alpha + \beta_{1}\text{X}_{1i} +\beta_{2}\text{X}_{2i}+\beta_{3}\text{X}_{3i}+\varepsilon_{i})$$
+
+$D_{i}$ is 1 if the state is the PESA state.
+$logit^{-1}$is the inverse logit function and shows the probability of getting the treatment.The controls $X_{ji}$ used are population, scheduled tribe population, and gap-in-literacy of ST population with the state average.
+
+The authors use 2 estimating equations which
+
+$$Y_{ist} = \tau \text{Scheduled Area}_{is} \times \text{PESA Election Year}_{ist} + \delta_i + \gamma_t + \varepsilon_{ist}$$ where $i$ indexes pixels/villages, $s$ indexes state, and $t$ indexes years.
+$Y_{ist}$ is the forest index for pixel $i$ in year $t$ or total area (in Hectares) deforested in village $i$ in year $t$ (in GFC), $\text{Scheduled Area}_{is} \times \text{PESA Election Year}_{ist}$ is a dummy that takes a value of 1 for pixels/villages in scheduled areas in the year the first election where PESA was implemented, $\delta_i$ is a pixel/village fixed effect, and $\gamma_t$ is a year fixed-effect.
+$\tau$ corresponds with the average effect of the introduction of PESA elections in Scheduled Areas (average treatment effect on the treated: ATT).
+
+$$Y_{ist} = \tau \text{Scheduled Area}_{is} \times \text{PESA Election Year}_{ist} + \delta_i + \xi_{st} + \delta_{it} + \varepsilon_{ist}$$ The setup remains the same but with additions,$\delta_{it}$ village-specific linear time trends and $\xi_{st}$ is the state-year fixed effects.This is the preferred equation of the author as they speculate that common year fixed effect may not account for state specific time-varying confounding.
+
+[^7]: "Gujarat Forest Statistics" *Gujarat Forest Department*
+<https://forests.gujarat.gov.in/guj-forest-statistics-pv.htm>.
+[^8]: Requested CG Govt. and got the primary data from them.
+
+# Results
+
+@fig-example shows that treatment happened in Gujarat after 2017.
+
+For my first analysis, I ran a difference-in-difference analysis in the states of Gujarat and Chhattisgarh.As mentioned earlier, Gujarat serves as a treatment because it notified its The treatment status in 2017.
+
+![Panel View Figure](C:\Users\sagra\OneDrive\Desktop\PLSC\final paper coding\Rplot.png){#fig-example width="80%"}
+
+![Effect of PESA on non-timber forest produce](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot11.png){#fig-NTFP width="100%"}
+
+@fig-NTFP shows that parallel trend assumption is likely to be violated.
+To control for this I have added GDP of states.
+@tbl-main shows the results of the regression.
+As the Table shows treatment leads to an increase in NTFP production of 35710 tons.An increase in GDP by 1 unit leads to a fall in non-timber forest produce by 1 ton.I find some evidence for author's claim that PESA will increase the forest stewardship between indigenous people and increase in sales and production of non-timber forest produce.They will now move away from fuel wood production to collecting and selling non-timber forest produce which is the one way through which this act will improve forest outcomes in the scheduled areas as shown by the authors and I replicate below.
+
+|                                                                                                       |
+|:-----------------------------------------------------------------------|
+| ![](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Screenshot%202023-12-21%20135618.png) |
+
+: Effect of PESA {#tbl-main }
+
+**Limitation** The parallel trend assumption seems to be violated here so I use the state GDP of these states over the years as control.
+Due to the smaller sample size (n=16), the results are noisy and the coefficient of treatment seems to encompass lots of biases and might be overestimating the treatment effect.
+Future research should look at this area with more sample size and hence more power.
+
+**Increase in forest produce**
+
+I would now replicate the author’s findings about forest outcomes using their data set(GFC and VCF data sets).Before that, I will present the summary statistics of various outcomes that the authors are concerned about.
+The first summary table is from the dataset VCF.
+It reports three continuous indices(forest cover index, non-forest green index and non-green index) that add up to 100 for each pixel.
+The second summary table comes from the GFC dataset.It reports an annual deforested area.This data set is only from 2001 unlike VCF which is from 1982.
+Therefore only 4 states have been used to study the variation.
+
+|                                                                                        |
+|:-----------------------------------------------------------------------|
+| ![](C:\Users\sagra\OneDrive\Pictures\Screenshots\Screenshot%202023-12-21%20140553.png) |
+|                                                                                        |
+|                                                                                        |
+| ![](C:\Users\sagra\OneDrive\Pictures\Screenshots\Screenshot%202023-12-21%20140626.png) |
+
+: Summamry statistics {#tbl-sum width = 10%}
+
+The authors have constructed a switching indicator for Scheduled Areas, in each state, based on the occurrence of the first panchayat election in Scheduled Areas following PESA.
+The timing is shown as follows below in the @fig-PV.
+
+![Panel View](C:\Users\sagra\OneDrive\Desktop\PLSC\final paper coding\Rplot17.png){#fig-PV width="80%"}
+
+The main analysis is done in @tbl-regression.
+The first three columns come from the GFC dataset where the outcome is annual deforested areas in hectares and treatment is coded based on PESA rollout, hence negative coefficients indicate a decrease in deforestation.
+The last three columns come from the VCF dataset and the outcome is the annual forest index.
+Column 1 and 4 estimates treatment effect from equation 1.columns 2 and 5 add in state-year FEs and column 3 and 6 results from equation 2.
+The results are restricted to places with ex-ante coverage of 2% in 1990 and 2000 respectively in the VCF and GFC datasets to eliminate bias of estimates towards 0.This is the 50th percentile of coverage in VCF and the 75th percentile in GFC.
+PESA places increased their forest cover and decreased their rate of deforestation at a 1% significance level.
+For the VCF dataset, PESA led to an increase in the forest cover ranging from 0.12 units to 0.36 units.
+For the GFC dataset, PESA leads to a decrease in deforestation rate ranging from 0.088 hectares to 0.067 hectares.
+However, some of the variables remain insignificant in the second model and the 4th model.
+@fig-gfc and @fig-vcf tests the results sensitivity to the choice of ex-ante forest cutoff and using equation 2 for both GFC and VCF datasets.
+The effect is larger for samples with higher ex-ante forest cutoff.
+
+|                                                                         |
+|:-----------------------------------------------------------------------|
+| ![](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\MR.png) |
+
+: Effect of PESA {#tbl-regression}
+
+![Effect of PESA at different thresholds(GFC)](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot12.png){#fig-gfc width="100%"}
+
+![Effect of PESA at different thresholds(VCF)](C:/Users/sagra/OneDrive/Desktop/PLSC/final%20paper%20coding/Rplot13.png){#fig-vcf width="80%"}
+
+Moving to heterogeneity analysis, I divided states into “poor”, “middle income” and “very rich”.
+Poor comprises Madhya Pradesh, Chhattisgarh, Jharkhand, and Orissa with some of the highest percentages of the indigenous population and lowest per capita NSDP in 2021-2022 ("with NGDP per capita \$1,601,\$1,589,,\$1,107,\$1,687 repectively).
+Middle-income states are Rajasthan, Himachal Pradesh, and Andhra Pradesh(\$1,790,\$2,650,$2,535$ respectively).Rich states are Maharashtra and Gujarat (\$2,834,\$3,185)[^9].
+Using the 1st equation , the results are reported in @tbl-HA. As the table shows poor states and very rich states are doing better in terms of forest outcomes as compared to middle income states when it comes to PESA.
+Treatment leads to 0.21 and 0.76 units increase in the forest index of poor and rich states.
+However, it leads to decrease in forest index by 0.418 units in middle income states.
+Forest Rights Act which @gulzar2021representation found had no impact on forest outcome is actually improving forest outcome in poor states by 0.135 units.
+On that other hand, it is decreasing forest index by 0.329 units in middle income states while having positive but insignificant impact on forest index in rich states.
+
+[^9]: "HANDBOOK OF STATISTICS ON INDIAN ECONOMY" *Reserve Bank of India, GOI*.
+    <https://rbi.org.in/Scripts/PublicationsView.aspx?id=21815>.
+
+These poor states have some of the highest number of indigenous population.
+I believe that this has allowed them to have more widespread and vibrant political representation than middle income states.
+The rich states also experience positive impact because they might be able to implement the provisions of PESA more stringently.
+So, this shows that type of institution do contribute the outcome that a policy can have.In my view coefficients of Forest Rights Act also points to this direction.
+I also believe that indigenous people will be able to sell and process NTFP only when they have land rights which is secured by this act.
+Future research should look at this aspect.
+
+|                                                                                       |
+|:-----------------------------------------------------------------------|
+| ![](C:/Users/sagra/OneDrive/Desktop/PLSC/final%20paper%20coding/FRA.png){width="610"} |
+
+: Heterogeneity Analysis {#tbl-HA}
+
+**Propensity score matching** Through propensity score matching, I tried matching the treatment and control groups.
+I used the ‘matchIt’ package to match the control group with the treatment group on several covariates like population, the gap in literacy, and the number of indigenous people in the state.
+The sample size is 25 states.
+It matched 6 control units with 13 treatment units with replacement.
+I tried matching with the “nearest” method which requires the specification of a distance measure to define which control unit is closest to each treated unit.
+The default and most common distance is the propensity score difference, which is the difference between the propensity scores of each treated and control unit (@Stuart2010-dq).
+The absolute standardized mean difference across the 3 covariates is less than 0.2 standard units.
+@fig-pmc reports the distribution of Propesnity scores.
+
+![Propensity scores](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot04.png){#fig-pmc width="70%"}
+
+I also tried employing the nearest method with Mahalanobis distance.
+However, it did worse than the nearest method without Mahalanobis distance.
+The full method with Mahalanobis distance didn’t match either as accurately as the nearest method with the conventional distance as can be seen from the figure below.Full matching makes use of all individuals in the data by forming a series of matched sets in which each set has either 1 treated individual and multiple comparison individuals or 1 comparison individual and multiple treated individuals (@Stuart2008-vp).
+The figures are reported in appendix.
+
+Using a balanced match using all three methods, I estimated the causal impact of PESA on average forest cover loss(from 2001 to 2022, the data starts from 2001 and I am assuming that PESA which was implemented in 1996 might take a few years to be properly implemented) among all the states.
+I show the estimate without matching and with all three types of matching in @tbl-PMC.
+The table shows that without matching treatment leads to 0.005 ha increase in average forest cover loss.
+With the preferred nearest matching, PESA leads to a decrease in average forest cover loss by 0.008 ha as found by the authors using their village-level data for 10 states.
+The other 2 methods show that PESA increased average forest cover loss by almost 0.02 hectares.
+
+**Limitations** The sample size is too small to rely on these results.
+The matching process might also involve biases as there will be more covariates to match control and treatment groups.
+Therefore, the treatment variables might be upwardly biased.
+Future research should use a large sample size to accurately study the impact of PESA using this method.
+
+|                                                                          |
+|:-----------------------------------------------------------------------|
+| ![](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\PMC.png) |
+
+: Propensity score matching {#tbl-PMC}
+
+# Conclusion
+
+Umbrella institutions which give mandated political representation through the way of local elections to indigenous people not only improve their economic and political life but also has huge positive impact on forest outcomes.
+Therefore, this can be the way ahead to solve multiple problems simultaneously.
+PESA did improve forest stewardship for indigenous people and helped them easily sell and produce non-timber forest produce.
+However, the analysis was restricted only to two states in India and have very less sample size.
+Similarly, doing propensity score matching revealed that PESA reduce the average forest cover loss in treated states as compared to untreated states.
+However, the analysis was again very primitive and I am under powered.
+Heterogeneity analysis revealed that richer and poorer states are doing better in forest outcomes through PESA rather than middle income states.
+These suggest a 'U' pattern and shows that different institution leads to very different forest outcomes in these states.
+Hence, not only 'de jure' but 'de factor' political empowerment of indigenous people is necessary for reducing exploitation of commons.
+
+
+
+::: {#refs}
+:::
+
+# Appendix {.appendix}
+
+
+
+![Effects of Forest Rights Act on Forest Index at different cutoff value (VCF data)](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot09.png){width="80%"}
+
+![Pre-PESA Deforestation Rates by distance to mines](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\mines.png){width="80%"}
+
+![Treatment effects on Annual Deforestation by Distance to Mines](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot10.png){width="80%"}
+
+![Nearest method with conventional distance](C:\Users\sagra\OneDrive\Desktop\PLSC\final paper coding\Rplot14.png){width="80%"}
+
+![Nearest method with Mahalanobis distance](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot15.png){width="80%"}
+
+![Full method with Mahalanobis distance](C:\Users\sagra\OneDrive\Desktop\PLSC\final%20paper%20coding\Rplot16.png){width="80%"}
